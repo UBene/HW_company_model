@@ -10,14 +10,13 @@ from ScopeFoundry.hardware import HardwareComponent
 
 class ModelHw(HardwareComponent):
 
-    name = "model"
+    name = "model or not"
 
     def setup(self):
         s = self.settings
         s.New("port", str, initial="COM1",
               description='COMx see device manager')
         s.New("property_x", float, ro=False, unit='mm', spinbox_decimals=4, si=False)
-
 
     def connect(self):
 
